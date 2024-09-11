@@ -15,7 +15,8 @@ public class ClickTasaNominalAEfectivaTasks implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(BTN_DE_TASANOMINAL_A_TASAEFECTIVA).afterWaitingUntilEnabled());
+                Click.on(BTN_DE_TASANOMINAL_A_TASAEFECTIVA).afterWaitingUntilEnabled()
+        );
     }
 }
 

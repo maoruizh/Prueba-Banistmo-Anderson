@@ -7,6 +7,8 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
+import static co.com.bancolombia.certification.prueba.userinterfaces.Bancolombia.*;
+
 public class InputTheData implements Task {
 
     public static InputTheData inputTheData() {
@@ -16,10 +18,10 @@ public class InputTheData implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(Bancolombia.TXT_INGRSE_TASA_INTERES).afterWaitingUntilEnabled(),
-                Enter.theValue("10").into(Bancolombia.TXT_INGRSE_TASA_INTERES),
-                Click.on(Bancolombia.BTN_PERIODICIDAD_MENSUAL).afterWaitingUntilEnabled(),
-                Click.on(Bancolombia.BTN_CAPITALIZACION_MENSUAL).afterWaitingUntilEnabled()
+                Click.on(TXT_INGRSE_TASA_INTERES).afterWaitingUntilEnabled(),
+                Enter.theValue("10").into(TXT_INGRSE_TASA_INTERES),
+                Click.on(BTN_PERIODICIDAD_MENSUAL).afterWaitingUntilEnabled(),
+                Click.on(BTN_CAPITALIZACION_MENSUAL).afterWaitingUntilEnabled()
                 );
     }
 }

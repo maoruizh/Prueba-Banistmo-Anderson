@@ -15,7 +15,9 @@ public class ClickConvertidorTasasInteresTasks implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Click.on(BTN_CONVERTIDOR_TASAS_INTERES).afterWaitingUntilEnabled());
+        actor.attemptsTo(
+                Click.on(BTN_CONVERTIDOR_TASAS_INTERES).afterWaitingUntilEnabled()
+        );
     }
 }
 

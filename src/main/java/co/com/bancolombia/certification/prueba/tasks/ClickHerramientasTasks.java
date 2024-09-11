@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.actions.Scroll;
 
 import static co.com.bancolombia.certification.prueba.userinterfaces.Bancolombia.BTN_FLECHA_DERECHA;
 import static co.com.bancolombia.certification.prueba.userinterfaces.Bancolombia.BTN_HERRAMIENTAS;
+
 public class ClickHerramientasTasks implements Task {
 
     public static ClickHerramientasTasks clickHerramientas() {
@@ -17,9 +18,11 @@ public class ClickHerramientasTasks implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Click.on(BTN_HERRAMIENTAS).afterWaitingUntilEnabled());
-        actor.attemptsTo(Scroll.to(BTN_FLECHA_DERECHA));
-        actor.attemptsTo(Click.on(BTN_FLECHA_DERECHA).afterWaitingUntilEnabled());
+        actor.attemptsTo(
+                Click.on(BTN_HERRAMIENTAS).afterWaitingUntilEnabled(),
+                Scroll.to(BTN_FLECHA_DERECHA),
+                Click.on(BTN_FLECHA_DERECHA).afterWaitingUntilEnabled()
+        );
     }
 }
 

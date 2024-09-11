@@ -52,14 +52,12 @@ public class BancolombiaStepDefinitions {
     public void SelectConvertidorTasasInteresButton(){
         theActorInTheSpotlight().attemptsTo(clickConvertidorTasasInteres());
         theActorInTheSpotlight().attemptsTo(Wait.seconds(300));
-
     }
 
     @And("Select De tasa nominal a tasa efectiva")
     public void SelectDeTasaNominalAEfectivaButton() {
         theActorInTheSpotlight().attemptsTo(clickTasaNominalAEfectiva());
         theActorInTheSpotlight().attemptsTo(Wait.seconds(300));
-
     }
 
     @When("Input data to calculate the tasa nominal a tasa efectiva")

@@ -15,6 +15,7 @@ public class ClickSolucionesNoFinancierasTasks implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(BTN_SOLUCIONES_NO_FINANCIERAS).afterWaitingUntilEnabled());
+                Click.on(BTN_SOLUCIONES_NO_FINANCIERAS).afterWaitingUntilEnabled()
+        );
     }
 }

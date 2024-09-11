@@ -13,7 +13,9 @@ public class ClickGestionarFinanzasTasks implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(Click.on(BTN_GESTIONAR_FINANZAS).afterWaitingUntilEnabled());
+        actor.attemptsTo(
+                Click.on(BTN_GESTIONAR_FINANZAS).afterWaitingUntilEnabled()
+        );
     }
 }
 
